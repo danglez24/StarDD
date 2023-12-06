@@ -2,6 +2,8 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import frc.robot.subsystems.ControlBoard;
+import frc.robot.Constants;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -19,14 +21,12 @@ public class Intake extends SubsystemBase {
     
     //constructor
     public Intake(){
-        intakeSpeed=0;
         motorIntake1 =  new TalonSRX(0);
     }
 
     //-------------funciones------------------------//
-    public void activarIntake(/*argumentos de la funcion*/){
-        intakeSpeed=-0.8;
-        motorIntake1.set(ControlMode.PercentOutput, -0.8);
+    public void activarHopper(boolean con2AButton){
+        motorIntake1.set(ControlMode.PercentOutput, 1);
     }
 
     //-------------funciones------------------------//
