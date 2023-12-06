@@ -24,6 +24,6 @@ public final class Constants {
   //---------------------Shooter--------------------------//
   public static final int MotorShoot = 10;
   //---------------------Shooter--------------------------//
-  public static final int MotorIntake1 = ;
-  public static final int MotorIntake2 = ;
+  public static final int MotorIntake1 = 6;
+  public static final int MotorIntake2 = 7;
 }
