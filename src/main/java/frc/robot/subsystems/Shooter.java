@@ -28,7 +28,7 @@ public class Shooter extends SubsystemBase {
     //---------------características-----------------//
     //constructor//
     public Shooter(){
-        motorShooter= new CANSparkMax(Constants.Motor2, MotorType.kBrushless);
+        motorShooter= new CANSparkMax(Constants.MotorShoot, MotorType.kBrushless);
         shooterspeed = 0;
     
     }
