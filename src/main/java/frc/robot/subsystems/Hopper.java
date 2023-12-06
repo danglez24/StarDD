@@ -33,7 +33,7 @@ public class Hopper extends SubsystemBase {
     
     }
     //-------------funciones------------------------//
-    public void activarShooter(Boolean getAButton){
+    public void activarHopper(Boolean getAButton){
        if(getAButton == true){
         motorHopper.set(ControlMode.PercentOutput, -0.8);
       }else{

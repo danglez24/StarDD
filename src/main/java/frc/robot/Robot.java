@@ -8,10 +8,12 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.Hopper;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.Constants;
 import frc.robot.subsystems.ControlBoard;
 import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Shooter;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -25,6 +27,9 @@ public class Robot extends TimedRobot {
   XboxController control1 = new XboxController(0);
 
   Drive mDrive = new Drive();
+  ControlBoard mControlBoard = new ControlBoard();
+  Shooter mShooter = new Shooter();
+  Hopper mHopper = new Hopper();
 
 
   /**
@@ -98,6 +103,8 @@ public class Robot extends TimedRobot {
   double absSpeed = rTrigg - lTrigg;
 
    mDrive.avanzar(absSpeed, -rStickX);
+   mHopper.activarHopper(mControlBoard.Bbutton);
+   mShooter.activarShooter(mControlBoard.xbutton);
 
   }
 

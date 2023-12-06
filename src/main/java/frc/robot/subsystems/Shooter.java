@@ -18,7 +18,7 @@ public class Shooter extends SubsystemBase {
      
     
 
-    //variables de logica
+    //variables de logica//
     double shooterspeed;
     double hopperspeed; 
 
@@ -43,5 +43,5 @@ public class Shooter extends SubsystemBase {
 }
    
 
-    //-------------funciones------------------------//
+
 
