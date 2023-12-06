@@ -2,7 +2,9 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMax.ControlType;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
@@ -10,26 +12,36 @@ public class Shooter extends SubsystemBase {
     
     //---------------características-----------------//
     //Hardware
-    TalonSRX 
+    TalonSRX motorHopper;
+    CANSparkMax motorShooter;
+
      
     
 
     //variables de logica
-    double ShooterSpeed;
+    double shooterspeed;
+    double hopperspeed; 
+
     
+
     
     //---------------características-----------------//
-    
-    //constructor
+    //constructor//
     public Shooter(){
-        motorshooter = new CANSparkMax(Constants.Motor2, )
-        motorhopper = new 
-
-    //-------------funciones------------------------//
-    public void activarIntake(/*argumentos de la funcion*/){
-        intakeSpeed=-0.8;
-        motorIntake1.set(ControlMode.PercentOutput, -0.8);
+        motorShooter= new CANSparkMax(Constants.Motor2, MotorType.kBrushless);
+        shooterspeed = 0;
+    
     }
+    //-------------funciones------------------------//
+    public void activarShooter(Boolean getAButton){
+       if(getAButton == true){
+        motorShooter.set(0.8);
+      }else{
+          motorShooter.set(0.0);
+      }
+    }
+}
+   
 
     //-------------funciones------------------------//
-}
+
