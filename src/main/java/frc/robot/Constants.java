@@ -14,13 +14,16 @@ public final class Constants {
   //Tolerancia del stick
   public static final double kStickTolerance = 0.15;
 
-  //---------------------controles-----------------------//
-  public static final XboxController control1 = new XboxController(0);
-  public static final XboxController control2 = new XboxController(1);
   //---------------------chasis--------------------------//
   public static final int MotorFR = 1;
   public static final int MotorBR = 2;
   public static final int MotorFL= 3;
   public static final int MotorBL= 4;
-  //---------------------chasis--------------------------//
+  //---------------------Hopper--------------------------//
+  public static final int MotorHop = 5;
+  //---------------------Shooter--------------------------//
+  public static final int MotorShoot = 10;
+  //---------------------Shooter--------------------------//
+  public static final int MotorIntake1 = ;
+  public static final int MotorIntake2 = ;
 }

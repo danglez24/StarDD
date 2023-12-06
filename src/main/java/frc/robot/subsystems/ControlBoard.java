@@ -2,8 +2,8 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.XboxController;
 
 public class ControlBoard {
-    XboxController control1 = new XboxController(0);
-    XboxController control2 = new XboxController(1);
+    public static final XboxController control1 = new XboxController(0);
+    public static final XboxController control2 = new XboxController(1);
 
     double con1LStickX = control1.getRawAxis(0);
     double con1LStickY = control1.getRawAxis(1);
@@ -12,5 +12,7 @@ public class ControlBoard {
     boolean con2AButton = control2.getRawButton(1);
     boolean con2XButton = control2.getRawButton(3);
     boolean con2BButton = control2.getRawButton(2);
+    double con2RTrigger = control2.getRawAxis(3);
+    double con2LTrigger = control2.getRawAxis(2);
 
 }
